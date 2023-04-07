@@ -21,6 +21,7 @@ while (mainMenuChoice != 0)
 {
     if (mainMenuChoice == -1)
     {
+        //Display main menu
         Console.WriteLine("\nThe following items are available:\n");
 
         //For loop useful for keeping count of iteration as well as looping through each item in ShopInventory list
@@ -32,7 +33,7 @@ while (mainMenuChoice != 0)
 
         //accept menu choice from keyboard
         Console.Write("\nEnter an item's number to see the price: ");
-        mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+        mainMenuChoice = ValidateUserInput(Console.ReadLine());
 
     }
 
@@ -43,46 +44,42 @@ while (mainMenuChoice != 0)
             Console.WriteLine("\nRope costs 10g");
             //mainMenuChoice = -1;
             Console.Write("\nEnter an item's number to see the price: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
         case 2:
             Console.WriteLine("\nTorches cost 15g");
             Console.Write("\nEnter an item's number to see the price: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
         case 3:
             Console.WriteLine("\nClimbing Gear costs 25g");
             Console.Write("\nEnter an item's number to see the price: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
         case 4:
             Console.WriteLine("\nClean Water costs 1g");
             Console.Write("\nEnter an item's number to see the price: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
         case 5:
             Console.WriteLine("\nMachete costs 20g");
             Console.Write("\nEnter an item's number to see the price: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
         case 6:
             Console.WriteLine("\nCanoe costs 200g");
             Console.Write("\nEnter an item's number to see the price: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
         case 7:
             Console.WriteLine("\nFood Supplies costs 1g");
             Console.Write("\nEnter an item's number to see the price: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
 
-        default:
-            if (mainMenuChoice is string)
-            {
-                Console.Write("\nPlease enter a number listed from the main menu: ");
-            }
+        default:         
             Console.Write("\nPlease enter a number listed from the main menu: ");
-            mainMenuChoice = ConvertStringToInt(Console.ReadLine());
+            mainMenuChoice = ValidateUserInput(Console.ReadLine());
             break;
     }
 
@@ -91,7 +88,7 @@ while (mainMenuChoice != 0)
 Console.WriteLine("\nThank you! Visit again.");
 Console.ReadKey();
 
-static int ConvertStringToInt(string input)
+static int ValidateUserInput(string input)
 {
     int result;
 
