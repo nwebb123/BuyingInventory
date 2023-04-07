@@ -6,10 +6,21 @@ using System.Threading.Tasks;
 
 namespace BuyingInventory
 {
-    internal class ShopItem
+    public class ShopItem
     {
-        public string Name { get; set; }
-        public int Price { get; set; }
+        //Constructor that initializes a ShopItem object when a new ShopItem() is called/created.
+        public string name;
+        public int price;
+
+        public ShopItem(string name, int price)
+        {
+            this.name = name;
+            this.price = price;
+        }
 
     }
+
+
+
+
 }
